@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite"  parallel="tests" thread-count="4" verbose="1" group-by-instances="true">
+
+    <listeners>
+        <listener class-name="utilities.Listeners.TestListener"/>
+        <listener class-name="utilities.Listeners.AnnotationTransformer"/>
+    </listeners>
+    <parameter name="browserName" value=""/>
+    <parameter name="author" value="Roberto Valdez"/>
+    <parameter name="appVersion" value="?"/>
+    <parameter name="port" value="4723"/>
+    <!--
+    <test name="CP_DASHBOARD_ANDROID">
+        <parameter name="deviceName" value="Samsung_9"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="udid" value="3558495334563098"/>
+        <parameter name="automationName" value="UiAutomator2"/>
+        <parameter name="wdaLocalPort" value="8201"/>
+        <parameter name="appPackage" value="com.bbva.GEMA"/>
+        <parameter name="activity" value="com.bbva.GEMA.MainActivity"/>
+        <parameter name="bundleId" value=""/>
+        <parameter name="llavero" value=""/>
+        <classes>
+            <class name="Dashboard.Dashboard_CP001">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se oculten y se muestren las cuentas en la sección de CUENTAS"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002596771"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Cuentas Corrientes"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="97335"/>
+                </methods>
+            </class>
+            <class name="Dashboard.Dashboard_CP002">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se oculten y se muestren las cuentas en la sección de TARJETAS DE CRÉDITO"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002596771"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="97335"/>
+                </methods>
+            </class>
+
+            <class name="Dashboard.Dashboard_CP003">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se oculten y se muestren las cuentas en la sección de INVERSIONES A PLAZO FIJO"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002568630"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Inversiones a plazo fijo"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="97335"/>
+                </methods>
+            </class>
+                        <class name="Dashboard.Dashboard_CP004">
+                            <methods>
+                                <parameter name="descripcion" value="Validar que se muestre la sección cuenta con sus movimientos "/>
+                                <parameter name="category" value="DETALLE_TDC"/>
+                                <parameter name="user" value="0017803002568630"/>
+                                <parameter name="pass" value="password00"/>
+                                <parameter name="tipoCuenta" value="Cuentas Corrientes"/>
+                                <parameter name="tipoCambio" value="MXN"/>
+                                <parameter name="cuenta" value="59263"/>
+                            </methods>
+                        </class>
+
+                        <class name="Dashboard.Dashboard_CP005">
+                            <methods>
+                                <parameter name="descripcion" value="Validar que se muestre la sección Tarjeta de crédito con sus movimientos"/>
+                                <parameter name="category" value="DETALLE_TDC"/>
+                                <parameter name="user" value="0017803002596771"/>
+                                <parameter name="pass" value="password00"/>
+                                <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                                <parameter name="tipoCambio" value="MXN"/>
+                                <parameter name="cuenta" value="18190"/>
+                            </methods>
+                        </class>
+
+
+            <class name="Dashboard.Dashboard_CP006">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se muestre la sección inversión con sus movimientos"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002591459"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="18190"/>
+                </methods>
+            </class>
+
+            <class name="Dashboard.Dashboard_CP007">
+                <methods>
+                    <parameter name="descripcion" value="Validar mensaje cuando una cuenta no tiene movimientos"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002591459"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Cuentas corrientes"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value=""/>
+                </methods>
+            </class>
+
+            <class name="Dashboard.Dashboard_CP008">
+                <methods>
+                    <parameter name="descripcion" value="Validar mensaje cuando una Tarjeta de crédito no tiene movimientos"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002596771"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="18190"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    -->
+
+            <test name="CP_DETALLE_TDC_IOS_02">
+                <parameter name="deviceName" value="iPhone X"/>
+                <parameter name="platformName" value="iOS"/>
+                <parameter name="platformVersion" value="12.4"/>
+                <parameter name="udid" value="4486d52d318d120262c1f40a8f2441167c938b8b"/>
+                <parameter name="automationName" value="XCUITest"/>
+                <parameter name="wdaLocalPort" value="8203"/>
+                <parameter name="appPackage" value=""/>
+                <parameter name="activity" value=""/>
+                <parameter name="bundleId" value="com.bbva.empresasEnt.mx"/>
+                <parameter name="llavero" value=""/>
+                <classes>
+                    <!--
+                   <class name="Dashboard.Dashboard_CP001">
+                       <methods>
+                           <parameter name="descripcion" value="Validar que se oculten y se muestren las cuentas en la sección de CUENTAS"/>
+                           <parameter name="category" value="DETALLE_TDC"/>
+                           <parameter name="user" value="0017803002568630"/>
+                           <parameter name="pass" value="password00"/>
+                           <parameter name="tipoCuenta" value="Cuentas corrientes"/>
+                           <parameter name="tipoCambio" value="MXN"/>
+                           <parameter name="ncuentas" value="4 cuentas"/>
+                       </methods>
+                   </class>
+                   -->
+    <!--
+   <class name="Dashboard.Dashboard_CP002">
+       <methods>
+           <parameter name="descripcion" value="Validar que se oculten y se muestren las cuentas en la sección de TARJETAS DE CRÉDITO"/>
+           <parameter name="category" value="DETALLE_TDC"/>
+           <parameter name="user" value="0017803002596771"/>
+           <parameter name="pass" value="password00"/>
+           <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+           <parameter name="tipoCambio" value="MXN"/>
+           <parameter name="cuenta" value="2 tarjetas"/>
+       </methods>
+   </class>
+
+   <class name="Dashboard.Dashboard_CP003">
+       <methods>
+           <parameter name="descripcion" value="Validar que se oculten y se muestren las cuentas en la sección de INVERSIONES A PLAZO FIJO"/>
+           <parameter name="category" value="DETALLE_TDC"/>
+           <parameter name="user" value="0017803002568630"/>
+           <parameter name="pass" value="password00"/>
+           <parameter name="tipoCuenta" value="Inversiones a plazo fijo"/>
+           <parameter name="tipoCambio" value="MXN"/>
+  -->
+
+            <class name="Dashboard.Dashboard_CP004">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se muestre la sección cuenta con sus movimientos "/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002596771"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Cuentas corrientes"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="ncuentas" value="7 cuentas"/>
+                    <parameter name="cuenta" value="49328"/>
+                </methods>
+            </class>
+<!--
+            <class name="Dashboard.Dashboard_CP005">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se muestre la sección Tarjeta de crédito con sus movimientos"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002596771"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="ncuentas" value="7 tarjetas"/>
+                    <parameter name="cuenta" value="18190"/>
+                </methods>
+            </class>
+
+
+<class name="Dashboard.Dashboard_CP006">
+    <methods>
+        <parameter name="descripcion" value="Validar que se muestre la sección inversión con sus movimientos"/>
+        <parameter name="category" value="DETALLE_TDC"/>
+        <parameter name="user" value="0017803002591459"/>
+        <parameter name="pass" value="password00"/>
+        <parameter name="tipoCuenta" value="Inversiones a plazo fijo"/>
+        <parameter name="tipoCambio" value="MXN"/>
+        <parameter name="ncuentas" value="7 inversión"/>
+        <parameter name="cuenta" value="18190"/>
+    </methods>
+</class>
+
+
+<class name="Dashboard.Dashboard_CP007">
+<methods>
+    <parameter name="descripcion" value="Validar mensaje cuando una cuenta no tiene movimientos"/>
+    <parameter name="category" value="DETALLE_TDC"/>
+    <parameter name="user" value="0017803002591459"/>
+    <parameter name="pass" value="password00"/>
+    <parameter name="tipoCuenta" value="Cuentas Corrientes"/>
+    <parameter name="tipoCambio" value="MXN"/>
+    <parameter name="ncuentas" value="7 cuentas"/>
+    <parameter name="cuenta" value=""/>
+</methods>
+</class>
+<class name="Dashboard.Dashboard_CP008">
+<methods>
+    <parameter name="descripcion" value="Validar mensaje cuando una Tarjeta de crédito no tiene movimientos"/>
+    <parameter name="category" value="DETALLE_TDC"/>
+    <parameter name="user" value="0017803002568630"/>
+    <parameter name="pass" value="password00"/>
+    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+    <parameter name="tipoCambio" value="MXN"/>
+    <parameter name="ncuentas" value="7 tarjetas"/>
+    <parameter name="cuenta" value="97335"/>
+</methods>
+</class>
+-->
+</classes>
+</test>
+</suite>
