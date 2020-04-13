@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite"  parallel="tests" thread-count="4" verbose="1" group-by-instances="true">
+
+    <listeners>
+        <listener class-name="utilities.Listeners.TestListener"/>
+        <listener class-name="utilities.Listeners.AnnotationTransformer"/>
+    </listeners>
+    <parameter name="browserName" value=""/>
+    <parameter name="author" value="Roberto Valdez"/>
+    <parameter name="appVersion" value="?"/>
+    <parameter name="port" value="4723"/>
+<!--
+    <test name="CP_LOGIN_ANDROID">
+        <parameter name="deviceName" value="Samsung_9"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="udid" value="3558495334563098"/>
+        <parameter name="automationName" value="UiAutomator2"/>
+        <parameter name="wdaLocalPort" value="8201"/>
+        <parameter name="appPackage" value="com.bbva.GEMA"/>
+        <parameter name="activity" value="com.bbva.GEMA.MainActivity"/>
+        <parameter name="bundleId" value=""/>
+        <parameter name="llavero" value=""/>
+
+        <classes>
+
+                        <class name="Login.Login_CP001">
+                            <methods>
+                                <parameter name="descripcion" value="Validar que se muestre el detalle largo de una tarjeta de crédito"/>
+                                <parameter name="category" value="DETALLE_TDC"/>
+                                <parameter name="user" value="0017803002591459"/>
+                                <parameter name="pass" value="password00"/>
+                                <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                                <parameter name="tipoCambio" value="MXN"/>
+                                <parameter name="cuenta" value="97335"/>
+                            </methods>
+                        </class>
+                        <class name="Login.Login_CP002">
+                            <methods>
+                                <parameter name="descripcion" value="Validar la funcionalidad del botón de ayuda'?' 'Saldo a favor'"/>
+                                <parameter name="category" value="DETALLE_TDC"/>
+                                <parameter name="user" value="0017803002591459"/>
+                                <parameter name="pass" value="password00"/>
+                                <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                                <parameter name="tipoCambio" value="MXN"/>
+                                <parameter name="cuenta" value="01005"/>
+                            </methods>
+                        </class>
+                        <class name="Login.Login_CP003">
+                            <methods>
+                                <parameter name="descripcion" value="Validar que se comparta el número de tarjeta"/>
+                                <parameter name="category" value="DETALLE_TDC"/>
+                                <parameter name="user" value="0017803002591459"/>
+                                <parameter name="pass" value="password00"/>
+                                <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                                <parameter name="tipoCambio" value="MXN"/>
+                                <parameter name="cuenta" value="97335"/>
+                            </methods>
+                        </class>
+
+            <class name="Login.Login_CP004">
+                <methods>
+                    <parameter name="descripcion" value="Validar la funcionalidad del botón 'Entendido'"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0=1780#002591$59"/>
+                    <parameter name="pass" value="password00"/>
+                    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="73118"/>
+                </methods>
+            </class>
+
+            <class name="Login.Login_CP005">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se muestre el detalle corto de una Tarjeta de crédito"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002596771"/>
+                    <parameter name="pass" value="pass"/>
+                    <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+                    <parameter name="tipoCambio" value="MXN"/>
+                    <parameter name="cuenta" value="18190"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+-->
+    <!--
+    <test name="CP_LOGIN_IOS_001">
+        <parameter name="deviceName" value="iPhone 8"/>
+        <parameter name="platformName" value="iOS"/>
+        <parameter name="platformVersion" value="12.4"/>
+        <parameter name="udid" value="bbe0eb64af97bce679edeb72c0252b6c3b356eda"/>
+        <parameter name="automationName" value="XCUITest"/>
+        <parameter name="wdaLocalPort" value="8204"/>
+        <parameter name="appPackage" value=""/>
+        <parameter name="activity" value=""/>
+        <parameter name="bundleId" value="com.bbva.empresasEnt.mx"/>
+        <parameter name="llavero" value=""/>
+        <classes>
+
+    <class name="Login.Login_CP001">
+        <methods>
+            <parameter name="descripcion" value="Validar que se muestre el detalle largo de una tarjeta de crédito"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0017803002591459"/>
+            <parameter name="pass" value="password00"/>
+            <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+            <parameter name="tipoCambio" value="MXN"/>
+            <parameter name="cuenta" value="97335"/>
+        </methods>
+    </class>
+    <class name="Login.Login_CP002">
+        <methods>
+            <parameter name="descripcion" value="Validar la funcionalidad del botón de ayuda'?' 'Saldo a favor'"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0017803002591459"/>
+            <parameter name="pass" value="password00"/>
+            <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+            <parameter name="tipoCambio" value="MXN"/>
+            <parameter name="cuenta" value="01005"/>
+        </methods>
+    </class>
+    <class name="Login.Login_CP003">
+        <methods>
+            <parameter name="descripcion" value="Validar que se comparta el número de tarjeta"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0017803002591459"/>
+            <parameter name="pass" value="password00"/>
+            <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+            <parameter name="tipoCambio" value="MXN"/>
+            <parameter name="cuenta" value="97335"/>
+        </methods>
+    </class>
+
+
+    <class name="Login.Login_CP004">
+        <methods>
+            <parameter name="descripcion" value="Validar la funcionalidad del botón 'Entendido'"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0=1780#002591$59"/>
+            <parameter name="pass" value="password00"/>
+            <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+            <parameter name="tipoCambio" value="MXN"/>
+            <parameter name="cuenta" value="73118"/>
+        </methods>
+    </class>
+    <class name="Login.Login_CP005">
+        <methods>
+            <parameter name="descripcion" value="Validar que se muestre el detalle corto de una Tarjeta de crédito"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0017803002616306"/>
+            <parameter name="pass" value="pass"/>
+            <parameter name="tipoCuenta" value="Tarjetas de crédito"/>
+            <parameter name="tipoCambio" value="MXN"/>
+            <parameter name="cuenta" value="18190"/>
+        </methods>
+    </class>
+
+        </classes>
+    </test>
+-->
+
+    <test name="CP_LOGIN_IOS">
+        <parameter name="deviceName" value="iPhone X"/>
+        <parameter name="platformName" value="iOS"/>
+        <parameter name="platformVersion" value="12.4"/>
+        <parameter name="udid" value="4486d52d318d120262c1f40a8f2441167c938b8b"/>
+        <parameter name="automationName" value="XCUITest"/>
+        <parameter name="wdaLocalPort" value="8203"/>
+        <parameter name="appPackage" value=""/>
+        <parameter name="activity" value=""/>
+        <parameter name="bundleId" value="com.bbva.empresasEnt.mx"/>
+        <parameter name="llavero" value=""/>
+        <classes>
+            <!--
+            <class name="Login.Login_CP001">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se muestre el detalle largo de una tarjeta de crédito"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002591459"/>
+                    <parameter name="pass" value="password00"/>
+                </methods>
+            </class>
+
+            <class name="Login.Login_CP002">
+                <methods>
+                    <parameter name="descripcion" value="Validar la funcionalidad del botón de ayuda'?' 'Saldo a favor'"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002591459"/>
+                    <parameter name="pass" value="password00"/>
+                </methods>
+            </class>
+
+
+            <class name="Login.Login_CP003">
+                <methods>
+                    <parameter name="descripcion" value="Validar que se comparta el número de tarjeta"/>
+                    <parameter name="category" value="DETALLE_TDC"/>
+                    <parameter name="user" value="0017803002591459"/>
+                    <parameter name="pass" value="password00"/>
+                </methods>
+            </class>
+
+    <class name="Login.Login_CP004">
+        <methods>
+            <parameter name="descripcion" value="Validar la funcionalidad del botón 'Entendido'"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0=1780#002591$59"/>
+            <parameter name="pass" value="password00"/>
+        </methods>
+    </class>
+    -->
+    <class name="Login.Login_CP005">
+        <methods>
+            <parameter name="descripcion" value="Validar que se muestre el detalle corto de una Tarjeta de crédito"/>
+            <parameter name="category" value="DETALLE_TDC"/>
+            <parameter name="user" value="0017803002616306"/>
+            <parameter name="pass" value="pass"/>
+        </methods>
+    </class>
+
+</classes>
+</test>
+</suite>
